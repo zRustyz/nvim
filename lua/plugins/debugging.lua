@@ -9,7 +9,7 @@ return {
 		local dap, dapui = require("dap"), require("dapui")
 
 		require("dapui").setup()
-		require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+		require("dap-python").setup("~/debugpy/bin/python")
 
 		require("dap").adapters["pwa-node"] = {
 			type = "server",
@@ -18,7 +18,7 @@ return {
 			executable = {
 				command = "node",
 				-- 💀 Make sure to update this path to point to your installation
-				args = { "~/.virtualenvs/js-debug/src/dapDebugServer.js", "${port}" },
+				args = { "~/js-debug/src/dapDebugServer.js", "${port}" },
 			},
 		}
 
