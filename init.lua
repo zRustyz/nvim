@@ -10,8 +10,5 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
 require("neovim-options")
 require("lazy").setup("plugins")
